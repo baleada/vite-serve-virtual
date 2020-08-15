@@ -1,0 +1,61 @@
+{
+  "name": "@baleada/vite-serve-virtual",
+  "version": "0.0.0",
+  "description": "Koa middleware that serves virtual files in a Vite app",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "scripts": {
+    "prepare": "node scripts/prepare.js",
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baleada/vite-serve-virtual.git"
+  },
+  "keywords": [
+    "baleada",
+    "markdown",
+    "vite",
+    "koa middleware"
+  ],
+  "author": {
+    "name": "Alex Vipond",
+    "email": "hello@alexvipond.dev",
+    "url": "https://alexvipond.dev"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/baleada/vite-serve-virtual/issues"
+  },
+  "homepage": "https://baleada.netlify.com",
+  "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/plugin-proposal-private-methods": "^7.6.0",
+    "@babel/preset-env": "^7.7.1",
+    "@baleada/prepare": "0.0.2",
+    "@nuxtjs/eslint-config": "^1.1.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "babel-eslint": "^10.0.3",
+    "core-js": "^3.4.1",
+    "eslint": "^6.6.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-ava": "^9.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-nuxt": "^0.5.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "regenerator-runtime": "^0.13.3",
+    "rollup-plugin-babel": "^4.4.0"
+  },
+  "dependencies": {
+    "@rollup/pluginutils": "^3.1.0",
+    "debug": "^4.1.1"
+  },
+  "peerDependencies": {
+    "vite": "^1.0.0-rc.3"
+  }
+}
