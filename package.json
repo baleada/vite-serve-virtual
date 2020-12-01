@@ -2,11 +2,15 @@
   "name": "@baleada/vite-serve-virtual",
   "version": "0.0.0",
   "description": "Koa middleware that serves virtual files in a Vite app",
-  "main": "lib/index.js",
-  "module": "lib/index.esm.js",
+  "type": "module",
+  "main": "lib/index.cjs",
+  "module": "lib/index.js",
+  "exports": {
+    "require": "./lib/index.cjs",
+    "import": "./lib/index.js"
+  },
   "scripts": {
-    "prepare": "node scripts/prepare.js",
-    "test": "ava"
+    "prepare": "rollup --config rollup.config.js"
   },
   "repository": {
     "type": "git",
@@ -29,31 +33,17 @@
   },
   "homepage": "https://baleada.netlify.com",
   "devDependencies": {
-    "@ava/babel": "^1.0.1",
-    "@babel/cli": "^7.7.0",
-    "@babel/core": "^7.7.2",
-    "@babel/plugin-proposal-class-properties": "^7.7.0",
-    "@babel/plugin-proposal-private-methods": "^7.6.0",
-    "@babel/preset-env": "^7.7.1",
-    "@baleada/prepare": "0.0.2",
-    "@nuxtjs/eslint-config": "^1.1.2",
-    "@rollup/plugin-node-resolve": "^7.1.1",
-    "babel-eslint": "^10.0.3",
-    "core-js": "^3.4.1",
-    "eslint": "^6.6.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-ava": "^9.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-nuxt": "^0.5.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "regenerator-runtime": "^0.13.3",
-    "rollup-plugin-babel": "^4.4.0"
+    "@baleada/prepare": "^0.3.6",
+    "rollup": "^2.34.0",
+    "uvu": "^0.5.1"
   },
   "dependencies": {
+    "@babel/runtime": "^7.12.5",
     "@rollup/pluginutils": "^3.1.0",
-    "debug": "^4.1.1"
+    "debug": "^4.1.1",
+    "etag": "^1.8.1",
+    "lru-cache": "^6.0.0",
+    "mime-types": "^2.1.27"
   },
   "peerDependencies": {
     "vite": "^1.0.0-rc.3"
