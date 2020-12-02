@@ -1,6 +1,6 @@
 {
   "name": "@baleada/vite-serve-virtual",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Koa middleware that serves virtual files in a Vite app",
   "type": "module",
   "main": "lib/index.cjs",
