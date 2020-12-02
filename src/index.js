@@ -2,8 +2,7 @@ import { existsSync, statSync } from 'fs'
 import { createFilter } from '@rollup/pluginutils'
 import LRUCache from 'lru-cache'
 import mime from 'mime-types'
-
-const getETag = require('etag')
+import getETag from 'etag'
 
 const defaultOptions = {
   toCacheStatus: () => 'valid',
