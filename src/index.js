@@ -63,12 +63,12 @@ function resolveTest (include, exclude, test) {
 // Adapted from Vite https://github.com/vitejs/vite/blob/ba7442fffd1f4787bd542f09dae93bc3197e33f9/src/node/utils/fsUtils.ts#L29
 async function cachedRead ({ ctx, id, cache, toCacheStatus, transform }) {
   const cached = cache.get(id),
-        { type, source, etag } = (() => {
+        { type, source, etag } = await (async () => {
           switch (toCacheStatus(id)) {
             case 'valid':
               return cached || ensureTransformed(transform({ id }))
             case 'invalid':
-              return ensureTransformed(transform({ id }))
+              return ensureTransformed(await transform({ id }))
           }
         })()
 
